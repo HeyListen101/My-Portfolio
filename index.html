@@ -15,7 +15,7 @@
         }
 
         body {
-            font-family: 'Spline Sans';
+            font-family: 'Spline Sans', sans-serif;
             margin: 0;
             overflow-x: hidden;
             background-color: #FDFDFD;
@@ -58,7 +58,6 @@
         }
 
         #hero-welcome {
-            justify-self: center;
             width: fit-content;
             height: 250px;
             display: grid;
@@ -101,6 +100,27 @@
             width: 20px;
         }
 
+        #about-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #about-me-content {
+            width: fit-content;
+            height: 400px;
+            display: grid;
+            grid-template-columns: 600px 1fr;
+            grid-template-rows: 1fr;
+            gap: 40px;
+            font-size: 1.25rem;
+        }
+
+        #portrait-img {
+            height: 400px;
+            border-radius: 25px;
+        }
+
         @media screen and (max-width: 640px) {
             body {
                 font-size: 12px;
@@ -117,6 +137,21 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: 150px 1fr;
                 gap: 50px;
+            }   
+        }
+
+        @media screen and (max-width: 1000px) {
+            #about-me-content {
+                height: fit-content;
+                grid-template-columns: 75vw;
+                grid-template-rows: 1fr;
+                font-size: 1rem;
+                gap: 10px;
+            }
+
+            #portrait-img {
+                justify-self: center;
+                height: 150px;
             }
         }
     </style>
@@ -151,6 +186,18 @@
     </section>
     
     <section id="about-me">
+        <div id="about-me-content">
+            <p>
+                I am currently a <strong>3rd year college student</strong> pursuing a <strong>Bachelor of Science in Computer Science</strong> degree at the <strong>Visayas State University</strong>. 
+                <br><br>
+                Enthusiastic in <strong>problem-solving</strong> and the realms of <strong>mathematics</strong> and <strong>physics</strong>.
+                <br><br>
+                Interested in <strong>engineering and developing software</strong> that can <strong>make a positive impact</strong> on the community by applying my knowledge from said domains.
+                <br><br>
+                As such, I am eager to step foot in the doors of <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong> engineering.
+            </p>
+            <img src="assets/images/Portrait.JPG" alt="Matienzo Portrait" id="portrait-img">
+        </div>
     </section>
 
     <section id="projects">
