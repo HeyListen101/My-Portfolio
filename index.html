@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Rafael S. Matienzo</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/TitleIcon.ico">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap');
+        
+        :root {
+            --primary: #0077B6;
+        }
+
+        body {
+            font-family: 'Spline Sans';
+            margin: 0;
+            overflow-x: hidden;
+            background-color: #FDFDFD;
+            font-size: 16px;
+        }
+
+        nav {
+            z-index: 1;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            padding: 25px 0 25px 0;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+        }
+
+        #link-holder {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #hero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hero-welcome {
+            justify-self: center;
+            width: fit-content;
+            height: 250px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 1fr;
+            gap: 20px;
+        }
+
+        #hero-img {
+            align-self: center;
+            width: 200px;
+            border-radius: 25px;
+        }
+
+        #hero-welcome > p {
+            align-self: center;
+        }
+
+        #hero-txt1, #hero-txt2 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        #my-name {
+            color: var(--primary);
+        }
+
+        #hero-txt3 {
+            font-size: 0.75rem;
+        }
+
+        #hero-social-icons {
+            position: absolute;
+            bottom: 10px;
+            display: flex;
+            gap: 25px;
+        }
+
+        #hero-social-icons > img {
+            width: 20px;
+        }
+
+        @media screen and (max-width: 640px) {
+            body {
+                font-size: 12px;
+            }
+            #link-holder {
+                width: 75%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            #hero-welcome {
+                width: 250px;
+                height: fit-content;
+                grid-template-columns: 1fr;
+                grid-template-rows: 150px 1fr;
+                gap: 50px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <div id="link-holder">
+        <a href="#about-me">About Me</a>
+        <a href="pages/resume.html">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Drop a Hello!</a>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div id="hero-welcome">
+            <img src="assets/images/HeroImg.JPG" alt="Matienzo Photo" id="hero-img">
+            <p>
+                <span id="hero-txt1">Hello.</span><br>
+                <span id="hero-txt2">I'm <span id="my-name">Jose Matienzo.</span></span><br>
+                <span id="hero-txt3">An aspiring <strong>AI/ML Engineer</strong>, <strong>Software Engineer</strong>, and <strong>Web Developer</strong>.</span>
+            </p>
+        </div>
+        <div id="hero-social-icons">
+            <img src="assets/images/linkedin.svg" alt="LinkedIn Icon">
+            <img src="assets/images/mail.svg" alt="Mail Icon">
+            <img src="assets/images/github.svg" alt="Github Icon">
+            <img src="assets/images/facebook.svg" alt="Facebook Icon">
+        </div>
+    </section>
+    
+    <section id="about-me">
+    </section>
+
+    <section id="projects">
+    </section>
+
+    <section id="contact">
+    </section>
+</body>
+</html>
