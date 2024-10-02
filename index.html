@@ -44,9 +44,25 @@
             justify-content: space-between;
         }
 
-        #link-holder > a {
+        #link-holder a {
             text-decoration: none;
             color: black;
+        }
+
+        #resume-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #download-link {
+            color: var(--primary) !important;
+            font-size: 0.55rem;
+            transition: 0.5s;
+        }
+
+        #download-link:hover {
+            font-weight: 800;
         }
 
         section {
@@ -312,6 +328,10 @@
             #projects-title {
                 text-align: left;
             }
+
+            #projects-list {
+                gap: 20px;
+            }
         }
 
         @media screen and (max-width: 800px) {
@@ -369,7 +389,10 @@
     <nav>
         <div id="link-holder">
             <a href="#about-me">About Me</a>
-            <a href="pages/resume.html">Resume</a>
+            <div id="resume-links">
+                <a href="pages/resume.html">Resume</a>
+                <a href="assets/Matienzo_2024Resume.pdf" download="Matienzo_2024Resume" id="download-link" target="_blank">Download PDF</a>
+            </div>
             <a href="#projects">Projects</a>
             <a href="#contact">Drop a Hello!</a>
         </div>
