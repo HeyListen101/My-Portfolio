@@ -14,6 +14,10 @@
             --primary: #0077B6;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Spline Sans', sans-serif;
             margin: 0;
@@ -288,10 +292,25 @@
 
         @media screen and (max-width: 640px) {
             body {
-                font-size: 12px;
+                font-size: 10px;
             }
+
             #link-holder {
                 width: 75%;
+            }
+
+            #projects {
+                gap: 20px;
+            }
+
+            .project-item {
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px 1fr;
+                gap: 0;
+            }
+
+            #projects-title {
+                text-align: left;
             }
         }
 
@@ -331,6 +350,10 @@
 
             #sp-title {
                 align-self: end;
+            }
+
+            #sp-list {
+                align-self: start;
             }
 
             .sp-item > img {
