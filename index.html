@@ -146,7 +146,7 @@
             width: 80%;
             height: fit-content;
             display: grid;
-            gap: 20px;
+            gap: 40px;
         }
 
         .project-item {
@@ -185,6 +185,57 @@
             font-weight: 200;
         }
 
+        #simple-projects {
+            display: grid;
+            grid-template-columns: 350px 1fr ;
+            grid-auto-rows: 1fr;
+            gap: 50px;
+            padding: 0 200px;
+            box-sizing: border-box;
+            margin-top: 75px;
+        }
+
+        #sp-title {
+            align-self: center;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        #sp-list {
+            display: grid;
+            grid-template-rows: min-content min-content min-content;
+            gap: 25px;
+        }
+
+        .sp-item {
+            background-color: #E4F0F6;
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            grid-template-rows: 1fr;
+            height: fit-content;
+            padding: 10px 25px;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .sp-item > img {
+            justify-self: center;
+            height: 75px;
+            width: auto;
+        }
+
+        .sp-name {
+            font-weight: 800;
+        }
+
+        .sp-link {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            
+        }
+
         @media screen and (max-width: 640px) {
             body {
                 font-size: 12px;
@@ -217,8 +268,24 @@
                 display: none;
             }
 
-            #projects {
+            #projects,
+            #simple-projects {
             padding: 0 10vw;
+            }
+
+            #simple-projects {
+                grid-template-columns: 1fr ;
+                grid-auto-rows: 50px 1fr;
+                gap: 50px;
+            }
+
+            #sp-title {
+                align-self: end;
+            }
+
+            .sp-item > img {
+                height: 50px;
+                width: auto;
             }
         }
     </style>
@@ -286,8 +353,40 @@
                     <span class="project-description">An online platform for competitive programming activities and contests geared towards training Computer Science students of the University on their problem-solving and creativity.</span>
                 </p>
             </div>
-            <div>
-                <span id="more-to-come">- more to come -</span>
+        </div>
+    </section>
+
+    <section id="simple-projects">
+        <div id="sp-title">
+            <span>Simpler projects.</span>
+        </div>
+        <div id="sp-list">
+            <div class="sp-item">
+                <img src="assets/images/pixel-art.png" alt="Etch-A-Sketch Icon">
+                <p>
+                    <span class="sp-name">Etch-A-Sketch</span><br>
+                    <span class="sp-description">An online canvas to make your very own pixel art and save it.</span>
+                    <br><br>
+                    <a href="" class="sp-link">Try it out!</a>
+                </p>
+            </div>
+            <div class="sp-item">
+                <img src="assets/images/healthcare.png" alt="Atomic Health Check Icon">
+                <p>
+                    <span class="sp-name">Atomic Health Check</span><br>
+                    <span class="sp-description">A health check that asks for some of the user's bodily conditions and provides a brief diagnosis.</span>
+                    <br><br>
+                    <a href="" class="sp-link">Try it out!</a>
+                </p>
+            </div>
+            <div class="sp-item">
+                <img src="assets/images/tic-tac-toe.png" alt="Tic Tac Toe">
+                <p>
+                    <span class="sp-name">Tic Tac Toe</span><br>
+                    <span class="sp-description">A website where you can play tic-tac-toe with another person.</span>
+                    <br><br>
+                    <a href="" class="sp-link">Try it out!</a>
+                </p>
             </div>
         </div>
     </section>
