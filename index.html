@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Rafael Salvo Matienzo</title>
+    <title>Jose Rafael S. Matienzo</title>
     <link rel="icon" type="image/x-icon" href="assets/images/TitleIcon.ico">
     
     <style>
@@ -16,6 +16,7 @@
 
         html {
             overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -50,6 +51,11 @@
             text-decoration: none;
             color: black;
             height: fit-content;
+            transition: 0.5s;
+        }
+
+        #link-holder a:hover {
+            font-weight: 800;
         }
 
         #resume-links {
@@ -93,7 +99,7 @@
         #hero-img {
             align-self: center;
             width: 200px;
-            border-radius: 25px;
+            border-radius: 100px;
         }
 
         #hero-welcome > p {
@@ -115,13 +121,20 @@
 
         #hero-social-icons {
             position: absolute;
-            bottom: 10px;
+            bottom: 0px;
             display: flex;
             gap: 25px;
+            padding: 10px 100px;
+            align-items: center;
         }
 
         #hero-social-icons > a > img {
-            width: 20px;
+            width: 25px;
+            transition: 0.25s;
+        }
+
+        #hero-social-icons > a > img:hover {
+            width: 27.5px;
         }
 
         #about-me {
@@ -182,6 +195,12 @@
             padding: 10px 25px;
             align-items: center;
             gap: 20px;
+            transition: 0.25s;
+            cursor: default;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
         }
 
         .project-item > img {
@@ -200,12 +219,6 @@
             font-weight: 700;
             text-align: left;
             padding-bottom: 10px;
-        }
-
-        #more-to-come {
-            display: block;
-            text-align: center;
-            font-weight: 200;
         }
 
         #simple-projects {
@@ -242,6 +255,12 @@
             align-items: center;
             gap: 20px;
             font-size: 0.9rem;
+            cursor: default;
+            transition: 0.25s;
+        }
+
+        .sp-item:hover {
+            transform: scale(1.025);
         }
 
         .sp-item > img {
@@ -258,6 +277,12 @@
             text-decoration: none;
             color: black;
             cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .sp-link:hover {
+            color: var(--primary);
+            font-weight: 600;
         }
 
         #contact {
@@ -391,11 +416,11 @@
 <body>
     <nav>
         <div id="link-holder">
-            <a href="#about-me">About Me</a>
             <div id="resume-links">
                 <a href="pages/resume.html">Resume</a>
-                <a href="assets/Matienzo_2024Resume.pdf" download="Matienzo_2024Resume" id="download-link" target="_blank">Download PDF</a>
+                <a href="resources/Matienzo_2024Resume.pdf" download="Matienzo_2024Resume" id="download-link" target="_blank">Download PDF</a>
             </div>
+            <a href="#about-me">About Me</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Drop a Hello!</a>
         </div>
@@ -403,7 +428,7 @@
 
     <section id="hero">
         <div id="hero-welcome">
-            <img src="assets/images/HeroImg.JPG" alt="Matienzo Photo" id="hero-img">
+            <a href="pages/resume.html"><img src="assets/images/HeroImg.JPG" alt="Matienzo Photo" id="hero-img"></a>
             <p>
                 <span id="hero-txt1">Hello.</span><br>
                 <span id="hero-txt2">I'm <span id="my-name">Jose Matienzo.</span></span><br>

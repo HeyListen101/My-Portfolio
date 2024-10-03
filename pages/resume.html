@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Rafael S. Matienzo : Resume</title>
-    <link rel="icon" type="image/x-icon" href="../assets/images/TitleIcon.ico">
+    <title>Jose Matienzo : Resume</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/TitleIcon2.ico">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap');
 
         :root {
             --primary: #0077B6;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -41,18 +45,81 @@
             align-items: center;
         }
 
+        #link-holder a:hover {
+            font-weight: 800;
+        }
+
         a {
             text-decoration: none;
             color: black;
+            transition: 0.5s;
         }
 
         section {
             width: 100vw;
             height: 100vh;
             display: grid;
-            grid-template-rows: 1fr;
             padding: 0 200px;
             box-sizing: border-box;
+        }
+
+        #resume {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #resume-content {
+            width: fit-content;
+            height: 250px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #resume-img {
+            width: 200px;
+            border-radius: 100px;
+        }
+
+        #resume-welcome > p {
+            align-self: center;
+            display: flex;
+        }
+
+        #resume-txt1 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        #resume-txt2 {
+            font-size: 0.85rem;
+        }
+
+        .links {
+            color: var(--primary);
+            transition: 0.25s;
+        }
+
+        .links:hover {
+            color: #CC934D;
+        }
+
+        #down-icon {
+            position: absolute;
+            bottom: 0px;
+            display: flex;
+            gap: 25px;
+            padding: 10px 100px;
+            align-items: center;
+        }
+
+        #down-icon > img {
+            width: 30px;
         }
 
         #experience {
@@ -120,9 +187,16 @@
             grid-template-rows: repeat(3, fit-content);
         }
 
+        #education-title {
+            margin-top: 65px;
+            margin-bottom: 20px;
+            font-size: 3em;
+            font-weight: 800;
+            text-align: center;
+        }
+
         #university {
             justify-self: center;
-            margin-top: 80px;
             display: grid;
             grid-template-columns: max-content 1fr;
             grid-template-rows: 1fr;
@@ -206,7 +280,12 @@
             height: fit-content;
             padding: 10px 25px;
             align-items: center;
-            gap: 20px;
+            transition: 0.25s;
+            cursor: default;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
         }
 
         .project-item > img {
@@ -225,12 +304,6 @@
             font-weight: 700;
             text-align: left;
             padding-bottom: 10px;
-        }
-
-        #more-to-come {
-            display: block;
-            text-align: center;
-            font-weight: 200;
         }
 
         #skills {
@@ -288,9 +361,25 @@
             }
         }
 
+        @media screen and (max-width: 800px) {
+            #resume-content {
+                width: 250px;
+                margin-top: 60px;
+                height: fit-content;
+                grid-template-columns: 1fr;
+                grid-template-rows: 150px 1fr;
+                gap: 20px;
+            }   
+        }
+
         @media screen and (max-width: 640px) {
             nav {
                 font-size: 0.8rem;
+            }
+
+            #education,
+            #projects {
+                height: max-content;
             }
 
             #projects {
@@ -358,14 +447,27 @@
 <body>
     <nav>
         <div id="link-holder">
-            <a href="../index.html">Home</a>
-            <a href="">Resume</a>
+            <a href="../index.html" id="">Home</a>|
+            <a href="#resume">Resume</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
         </div>
     </nav>
+
+    <section id="resume">
+        <div id="resume-content">
+            <a href="../index.html"><img src="../assets/images/ResumeImg.PNG" alt="Matienzo Photo" id="resume-img" alt="Resume Image"></a>
+            <p>
+                <span id="resume-txt1">Take a peek at my resume <a class="links" href="../resources/Matienzo_2024Resume.pdf" target="_blank">here</a>.</span><br>
+                <span id="resume-txt2">Or download the PDF by clicking <a class="links" href="../resources/Matienzo_2024Resume.pdf" download>here</a>.</span>
+            </p>
+        </div>
+        <div id="down-icon">
+            <img src="../assets/images/down.svg" alt="Down Icon">
+        </div>
+    </section>
 
     <section id="experience">
         <div id="experience-title">My Experience.</div>
@@ -393,6 +495,7 @@
     </section>
     
     <section id="education">
+        <div id="education-title">My Education.</div>
         <div id="university">
             <img src="../assets/images/VSU Seal (2022).svg" alt="VSU Logo">
             <p>
