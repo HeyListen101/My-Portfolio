@@ -27,10 +27,11 @@
             width: 100vw;
             position: fixed;
             top: 0;
-            padding: 25px 0;
+            padding: 20px 0;
             display: flex;
             justify-content: center;
             background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
         }
 
         #link-holder {
@@ -48,6 +49,247 @@
         section {
             width: 100vw;
             height: 100vh;
+            display: grid;
+            padding: 0 200px;
+            box-sizing: border-box;
+        }
+
+        #experience {
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto 1fr;
+            gap: 0;
+        }
+
+        #experience-title {
+            padding-top: 70px;
+            font-size: 3rem;
+            font-weight: 800;
+            height: fit-content;
+        }
+
+        #experience-content {
+            justify-self: center;
+            width: 80%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: min-content;
+        }
+
+        #experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+
+        #experience-pos {
+            margin: 0;
+        }
+
+        .experience-left,
+        .experience-right {
+            width: 75%;
+        }
+
+        .experience-left {
+            text-align: justify;
+        }
+
+        .experience-right {
+            justify-self: right;
+            text-align: right;
+        }
+
+        #education {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, fit-content);
+        }
+
+        #university {
+            justify-self: center;
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: 1fr;
+            width: fit-content;
+            gap: 20px;
+            align-items: center;
+        }
+
+        #university > img {
+            height: 150px;
+            width: auto;
+            justify-self: end;
+        }
+
+        #university-name {
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+
+        #university-address {
+            font-weight: 200;
+            font-size: 0.75rem;
+        }
+
+        #university-course {
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        #university-enrollment {
+            font-weight: 200;
+            font-size: 0.75rem;
+        }
+
+        #awards,
+        #volunteering {
+            justify-self: center;
+            text-align: center;
+            height: fit-content;
+        }
+
+        #awards-title,
+        #volunteering-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        #projects {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto 1fr;
+            gap: 50px;
+            padding: 0 200px;
+            box-sizing: border-box;
+        }
+
+        #projects-title {
+            width: 100%;
+            text-align: right;
+            margin-top: 75px;
+            padding-right: 25px;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        #projects-list {
+            justify-self: center;
+            width: 80%;
+            height: fit-content;
+            display: grid;
+            gap: 40px;
+        }
+
+        .project-item {
+            background-color: #E4F0F6;
+            border-radius: 25px;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            grid-template-rows: 1fr;
+            height: fit-content;
+            padding: 10px 25px;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .project-item > img {
+            justify-self: center;
+            height: 75px;
+            width: auto;
+        }
+
+        .project-item > p {
+            color: #333333;
+        }
+
+        .project-name {
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+
+        #more-to-come {
+            display: block;
+            text-align: center;
+            font-weight: 200;
+        }
+
+        #skills {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: fit-content 1fr;
+            position: relative;
+            gap: 10px;
+        }
+
+        #skill-text {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #333333;
+            justify-self: center;
+            align-self: end;
+        }
+
+        #skills > img {
+            justify-self: center;
+            width: 40vw;
+            height: auto;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            color: #808080;
+            font-size: 0.75rem;
+        }
+
+        @media screen and (max-width: 640px) {
+            body {
+                font-size: 10px;
+            }
+
+            #projects {
+                gap: 20px;
+            }
+
+            .project-item {
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px 1fr;
+                gap: 0;
+            }
+
+            #projects-title {
+                text-align: left;
+            }
+
+            #projects-list {
+                gap: 20px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            section {
+                padding: 0 5vw;
+            }
+
+            #link-holder {
+                width: 75%;
+            }
+
+            .experience-left,
+            .experience-right {
+                margin: 0;
+            }
+
+            #projects {
+                padding: 0 10vw;
+            }
         }
     </style>
 
@@ -57,6 +299,7 @@
     <nav>
         <div id="link-holder">
             <a href="../index.html">Home</a>
+            <a href="">Resume</a>
             <a href="#experience">Experience</a>
             <a href="#education">Education</a>
             <a href="#projects">Projects</a>
@@ -65,15 +308,81 @@
     </nav>
 
     <section id="experience">
+        <div id="experience-title">My Experience.</div>
+        <div id="experience-content">
+            <p id="experience-header">
+                <span>Remote Freelancng</span>
+                <span>July 2024 - Present</span>
+            </p>
+            <p id="experience-pos">
+                Web Developer
+            </p>
+            <p class="experience-left">
+                Deployed a music streaming website using the Laravel Framework for both front-end and back-end development, MySQL for the database, and BitBucket for the Git version control.
+            </p>
+            <p class="experience-right">
+                Developed a Python application within a 1-week time frame that could detect key words when typed, replacing them with a predefined string thus improving the client’s typing efficiency.
+            </p>
+            <p class="experience-left">
+                Performed a joint coding session with the client while also leveraging ChatGPT’s Code CoPilot function attaining a 25% progress on the python app within a few hours.
+            </p>
+            <p class="experience-right">
+                Remotely set up 4 website subdomains with AWS Cloud Services, BitBucket, and PuTTY.
+            </p>
+        </div>
     </section>
     
     <section id="education">
+        <div id="university">
+            <img src="../assets/images/VSU Seal (2022).svg" alt="VSU Logo">
+            <p>
+                <span id="university-name">Visayas State University - Main Campus</span><br>
+                <span id="university-address">Baybay City, Leyte 6521, Philippines</span><br>
+                <br>
+                <span id="university-course">Bachelor of Science in Computer Science</span><br>
+                <span id="university-enrollment">September 2022 - Present</span><br>
+            </p>
+        </div>
+        <div id="volunteering">
+            <p id="volunteering-title">Volunteering</p>
+            <p>Mentor for underclassmen students taking Differential and Integral Calculus <i>(April 2024 - Present)</i></p>
+            <p>Co-organizer and Problem Creator of the Department’s C/C++ Programming Competition <i>(February 2024)</i></p>
+        </div>
+        <div id="awards">
+            <p id="awards-title">Awards</p>
+            <p>1st Place in the Eastern Visayas Coding Olympics 2023 – C Division <i>(September 2023)</i></p>
+            <p>1st Place in the Department’s C/C++ Programming Competition <i>(February 2023)</i></p>
+        </div>
     </section>
 
     <section id="projects">
+        <div id="projects-title">
+            <span>My projects so far.</span>
+        </div>
+        <div id="projects-list">
+            <div class="project-item">
+                <img src="../assets/images/ViSiTa Icon.png" alt="ViSiTa Icon">
+                <p>
+                    <span class="project-name">ViSiTa: VSU Market Directory</span><br>
+                    <span class="project-description">A desktop application that provides up-to-date information on the University market stores and stalls from open-closed status to products being sold through a user-friendly map interface.</span>
+                </p>
+            </div>
+            <div class="project-item">
+                <img src="../assets/images/VSU COPP.png" alt="VSU COPP Icon">
+                <p>
+                    <span class="project-name">VSU Competitive Online Programming Platform</span><br>
+                    <span class="project-description">An online platform for competitive programming activities and contests geared towards training Computer Science students of the University on their problem-solving skills.</span>
+                </p>
+            </div>
+        </div>
     </section>
 
     <section id="skills">
+        <div id="skill-text">
+            Technologies I have experience on...
+        </div>
+        <img src="../assets/images/technologies.png" alt="technologies">
+        <footer>&copy; Copyright 2024. All Rights Reserved.</footer>
     </section>
 </body>
 </html>
