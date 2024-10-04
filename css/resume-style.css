@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap');
+
+:root {
+    --primary: #0077B6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Spline Sans', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #FDFDFD;
+    font-size: 16px;
+}
+
+nav {
+    z-index: 1;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+#link-holder {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#link-holder a:hover {
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    padding: 0 200px;
+    box-sizing: border-box;
+}
+
+#resume {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#resume-content {
+    width: fit-content;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+#resume-img {
+    width: 200px;
+    border-radius: 100px;
+}
+
+#resume-welcome > p {
+    align-self: center;
+    display: flex;
+}
+
+#resume-txt1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#resume-txt2 {
+    font-size: 0.85rem;
+}
+
+.links {
+    color: var(--primary);
+    transition: 0.25s;
+}
+
+.links:hover {
+    color: #CC934D;
+}
+
+#down-icon {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    gap: 25px;
+    padding: 10px 100px;
+    align-items: center;
+}
+
+#down-icon > img {
+    width: 30px;
+}
+
+#experience {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto 1fr;
+    gap: 0;
+}
+
+#experience-title {
+    padding-top: 70px;
+    font-size: 3rem;
+    font-weight: 800;
+    height: fit-content;
+}
+
+#experience-job {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+#experience-date {
+    font-weight: 200;
+    font-style: italic;
+}
+
+#experience-pos {
+    font-size: 1.25rem;
+}
+
+#experience-content {
+    justify-self: center;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+}
+
+#experience-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+#experience-pos {
+    margin: 0;
+}
+
+.experience-left,
+.experience-right {
+    width: 75%;
+}
+
+.experience-left {
+    text-align: justify;
+}
+
+.experience-right {
+    justify-self: right;
+    text-align: right;
+}
+
+#education {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, fit-content);
+}
+
+#education-title {
+    margin-top: 65px;
+    margin-bottom: 20px;
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+}
+
+#university {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr;
+    width: fit-content;
+    gap: 20px;
+    align-items: center;
+}
+
+#university > img {
+    height: 150px;
+    width: auto;
+    justify-self: end;
+}
+
+#university-name {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+#university-address {
+    font-weight: 200;
+    font-size: 0.75rem;
+}
+
+#university-course {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+#university-enrollment {
+    font-weight: 200;
+    font-size: 0.75rem;
+}
+
+#awards,
+#volunteering {
+    justify-self: center;
+    text-align: center;
+    height: fit-content;
+}
+
+#awards-title,
+#volunteering-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto 1fr;
+    gap: 50px;
+    padding: 0 200px;
+    box-sizing: border-box;
+}
+
+#projects-title {
+    width: 100%;
+    text-align: right;
+    margin-top: 75px;
+    padding-right: 25px;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#projects-list {
+    justify-self: center;
+    width: 80%;
+    height: fit-content;
+    display: grid;
+    gap: 40px;
+}
+
+.project-item {
+    background-color: #E4F0F6;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr;
+    height: fit-content;
+    padding: 10px 25px;
+    align-items: center;
+    transition: 0.25s;
+    cursor: default;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.project-item > img {
+    justify-self: center;
+    height: 75px;
+    width: auto;
+}
+
+.project-item > p {
+    color: #333333;
+}
+
+.project-name {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+#skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content 1fr;
+    position: relative;
+    gap: 10px;
+}
+
+#skill-text {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #333333;
+    justify-self: center;
+    align-self: end;
+}
+
+#skills > img {
+    justify-self: center;
+    width: 50vw;
+    height: auto;
+}
+
+footer {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #808080;
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 1000px) {
+    section {
+        padding: 0 5vw;
+    }
+
+    #link-holder {
+        width: 75%;
+    }
+
+    .experience-left,
+    .experience-right {
+        margin: 0;
+    }
+
+    #projects {
+        padding: 0 10vw;
+    }
+
+    #skills > img {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #resume-content {
+        width: 250px;
+        margin-top: 60px;
+        height: fit-content;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr;
+        gap: 20px;
+    }   
+}
+
+@media screen and (max-width: 640px) {
+    nav {
+        font-size: 0.8rem;
+    }
+
+    #education,
+    #projects {
+        height: max-content;
+    }
+
+    #projects {
+        gap: 20px;
+    }
+
+    .project-item {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr;
+        gap: 0;
+    }
+
+    #projects-title {
+        text-align: left;
+    }
+
+    #projects-list {
+        gap: 20px;
+    }
+
+    #university {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+    }
+
+    #university > img {
+        justify-self: center;
+    }
+
+    #university > p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section {
+        height: max-content;
+    }
+
+    #resume {
+        height: 100vh;
+    }
+
+    #experience,
+    #skills {
+        grid-template-rows: min-content 1fr;
+    }
+
+    #experience-content {
+        gap: 20px;
+    }
+
+    nav {
+        font-size: 0.6rem;
+    }
+
+    #skills {
+        height: 100vh;
+    }
+
+    #skill-text {
+        margin-top: 200px;
+    }
+}
