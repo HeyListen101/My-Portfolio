@@ -270,12 +270,7 @@ section {
     height: fit-content;
     padding: 10px 25px;
     align-items: center;
-    transition: 0.25s;
     cursor: default;
-}
-
-.project-item:hover {
-    transform: scale(1.05);
 }
 
 .project-item > img {

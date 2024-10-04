@@ -189,12 +189,7 @@ section {
     padding: 10px 25px;
     align-items: center;
     gap: 20px;
-    transition: 0.25s;
     cursor: default;
-}
-
-.project-item:hover {
-    transform: scale(1.05);
 }
 
 .project-item > img {
@@ -249,7 +244,7 @@ section {
     align-items: center;
     gap: 20px;
     font-size: 0.9rem;
-    cursor: default;
+    cursor: pointer;
     transition: 0.25s;
 }
 
@@ -270,13 +265,6 @@ section {
 .sp-link {
     text-decoration: none;
     color: black;
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-.sp-link:hover {
-    color: var(--primary);
-    font-weight: 600;
 }
 
 #contact {
@@ -391,12 +379,13 @@ footer {
     #projects,
     #simple-projects {
         padding: 0 10vw;
+        height: fit-content;
     }
 
     #simple-projects {
         grid-template-columns: 1fr ;
         grid-auto-rows: 50px 1fr;
-        gap: 50px;
+        gap: 20px;
     }
 
     #sp-title {
