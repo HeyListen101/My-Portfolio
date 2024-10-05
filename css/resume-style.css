@@ -179,10 +179,8 @@ section {
 
 #education-title {
     margin-top: 65px;
-    margin-bottom: 20px;
     font-size: 3em;
     font-weight: 800;
-    text-align: center;
 }
 
 #university {
@@ -196,29 +194,29 @@ section {
 }
 
 #university > img {
-    height: 150px;
+    height: 100px;
     width: auto;
     justify-self: end;
 }
 
 #university-name {
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 #university-address {
     font-weight: 200;
-    font-size: 0.75rem;
+    font-size: 0.6rem;
 }
 
 #university-course {
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 0.75rem;
 }
 
 #university-enrollment {
     font-weight: 200;
-    font-size: 0.75rem;
+    font-size: 0.6rem;
 }
 
 #awards,
@@ -232,7 +230,7 @@ section {
 #volunteering-title {
     font-size: 1.25rem;
     font-weight: 800;
-    color: var(--primary);
+    color: #28442C;
 }
 
 #projects {
@@ -262,8 +260,9 @@ section {
 }
 
 .project-item {
+    border-left: 5px solid var(--primary);
     background-color: #E4F0F6;
-    border-radius: 25px;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-template-rows: 1fr;
@@ -289,6 +288,10 @@ section {
     font-weight: 700;
     text-align: left;
     padding-bottom: 10px;
+}
+
+.project-description {
+    font-size: 0.9rem;
 }
 
 #skills {

@@ -180,8 +180,9 @@ section {
 }
 
 .project-item {
+    border-left: 5px solid var(--primary);
     background-color: #E4F0F6;
-    border-radius: 25px;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-template-rows: 1fr;
@@ -208,6 +209,10 @@ section {
     font-weight: 700;
     text-align: left;
     padding-bottom: 10px;
+}
+
+.project-description {
+    font-size: 0.9rem;
 }
 
 #simple-projects {
