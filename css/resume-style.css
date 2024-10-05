@@ -389,8 +389,10 @@ footer {
     }
 
     #university {
+        margin-top: 15px;
         grid-template-columns: 1fr;
         grid-template-rows: max-content 1fr;
+        gap: 0;
     }
 
     #university > img {
@@ -399,6 +401,11 @@ footer {
 
     #university > p {
         text-align: center;
+    }
+
+    #volunteering-title,
+    #awards-title {
+        margin-bottom: 0px;
     }
 }
 
